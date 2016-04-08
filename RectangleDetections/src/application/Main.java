@@ -179,27 +179,16 @@ public class Main extends Application {
 		 double rec2_ybound = rec2.getY() + rec2.getHeight();
 		 
 		 
-		 if(rec.getX() == rec2.getY()  || (rec.getX() == rec2_ybound) || (rec.getX() == rec2_xbound))
-		 {
-			 //adjacency
-			 System.out.println(">>Adjacency detected<< \n");
-		 }
-		 else if (rec.getY() == rec2.getX() || (rec.getY() == rec2_xbound) || (rec.getY() == rec2_ybound))
-		 {
-			 System.out.println(">>Adjacency detected<< \n");
-		 }
+		if((rec.getX() == rec2_xbound) || (rec2.getX() == rec_xbound))
+		{
+			System.out.println(" >> Adjacency detected <<\n");
+		}
 		
-		 
-		 else if(rec2.getX() ==rec.getY()  || (rec2.getX() == rec_ybound) || (rec2.getX() == rec_xbound))
-		 {
-			 //adjacency
-			 System.out.println("Adjacency detected \n");
-		 }
-		 else if (rec2.getY() == rec.getX() || (rec2.getY() == rec_xbound) || (rec2.getY() == rec_ybound))
-		 {
-			 //adjacency
-			 System.out.println("Adjacency detected \n");
-		 }
+		if((rec_ybound == rec2.getY()) || (rec2_ybound == rec.getY()))
+		{
+			System.out.println(">> Adjacancy detected << \n");
+		}
+		
 		
 		 
 		 
